@@ -4,7 +4,7 @@
 -- Usage: Ensures that the 'area_code' in 'crimedata' is synchronized with any new entries in 'fixeddata' that share the same 'file_no', maintaining data consistency across tables.
 
 CREATE TRIGGER 		trg_updateCrimeData
-ON 					crimedatabase.dbo.fixeddata 
+ON 			crimedatabase.dbo.fixeddata 
 AFTER INSERT 
 AS
 BEGIN 
