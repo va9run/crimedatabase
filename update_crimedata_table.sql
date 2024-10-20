@@ -1,14 +1,17 @@
+-- Check if the table already exists
 DROP TABLE IF EXISTS crimedatabase.dbo.updated_crimedata;
+
+-- First get the areas where the code already exists
 WITH area_code AS
 (
 	SELECT		area_code,
-				area_name
+			area_name
 	FROM 		crimedatabase.dbo.crimedata
 	WHERE 		area_code is NOT NULL
-),
+), -- Now using inner join with original table get the area code matching area_name
 fill_area_code AS 
 (
-	SELECT 		c.file_no,
+	SELECT 			c.file_no,
 				c.date_rptd,
 				c.date_occ,
 				c.time_occ,
@@ -35,8 +38,8 @@ fill_area_code AS
 				c.cross_street,
 				c.latitude AS lat,
 				c.longitude AS lon
-	FROM 		crimedatabase.dbo.crimedata AS c
-	INNER JOIN 	area_code AS d
+	FROM 			crimedatabase.dbo.crimedata AS c
+	INNER JOIN 		area_code AS d
 	ON 			c.area_name = d.area_name
 )
 SELECT 			*
