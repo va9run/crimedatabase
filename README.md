@@ -10,4 +10,4 @@ This dashboard provides a comprehensive overview of crime trends in Los Angeles 
 5) Filters (on the right): Customize your view by selecting crime types, date ranges, or specific areas for detailed analysis.
 
 ![docker_image](https://github.com/user-attachments/assets/e087ff1f-b22b-4fed-a11a-ea0c20b0a4b3)
-![LA Crime Board](https://github.com/user-attachments/assets/00569968-b237-4d2a-ab3a-6b86e3afe01d)
+![LA Crime Board](https://github.com/user-attachments/assets/135772a6-28b4-48ba-8058-a818c1fb64b8)
